@@ -1,0 +1,65 @@
+/* CSS par @theotix */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+body {
+    min-height: 100vh;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    color: #404040;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    padding: 1em 5%;
+    background: rgba(147, 128, 108, 0.1);
+}
+
+header h1 {
+    font-size: 1.5em;
+    margin-right: 1em;
+}
+
+header h2 {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+section {
+    flex: 1 1 0%;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 5%;
+}
+
+#message {
+    max-width: 60rem;
+    font-size: 2em;
+    line-height: 1.5em;
+}
+
+footer {
+    padding: 1em 5%;
+    text-align: center;
+    font-size: 0.85em;
+}
+
+footer a {
+    color: #404040;
+}
