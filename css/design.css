@@ -45,13 +45,27 @@ section {
     -webkit-box-align: center;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     padding: 1em 5%;
 }
 
 #message {
     max-width: 60rem;
+    margin-bottom: 1em;
     font-size: 2em;
     line-height: 1.5em;
+}
+
+#links a {
+    display: inline-block;
+    padding: 1em 1.5em;
+    color: #404040;
+    text-decoration: none;
+    background: rgba(147, 128, 108, 0.3);
+}
+
+#links a:hover {
+    background: rgba(147, 128, 108, 0.5);
 }
 
 footer {
