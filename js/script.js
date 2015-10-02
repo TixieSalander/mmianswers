@@ -106,5 +106,11 @@ function randomconclu() {
     var rconclu = element_from_array('conclusions');
     return rconclu;
 }
+var post = randomintro() + "." + randomconclu();
+document.getElementById("message").innerHTML = post;
+post = jQuery.trim(post).substring(0, 116).split(" ").slice(0, -1).join(" ") + "...";
+post = encodeURIComponent(post.trim());
+var href_tweet= "http://twitter.com/intent/tweet?text="+ post +"&amp;url=http%3A%2F%2Fandredasilva.fr%2Fmmianswers%2F";
+$("#tweet").attr("href", href_tweet);
 
-document.getElementById("message").innerHTML = randomintro() + "." + randomconclu();
+
