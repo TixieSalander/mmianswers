@@ -6,19 +6,24 @@ function element_from_array(tableau) {
     var randomi = getRandomInt(0, window[tableau].length - 1);
     return window[tableau][randomi];
 }
-var utilisateurs = ["installer", "faire un apt-get install", "remove", "upgrade", "include", "importer", "link", "upload", "fork", "configurer"];
-var gentils_pluriel = ["Jquery", "NodeJS", "PHP", "CSS3", "HTML5", "AJAX"];
+var utilisateurs = ["installer", "faire un apt-get install", "remove", "update", "lancer", "upgrade", "include", "importer", "link", "upload", "fork", "configurer"];
+var utilisateurs2 = ["installer", "faire un apt-get install", "remove", "update", "lancer", "upgrade", "include", "importer", "link", "upload", "fork", "configurer"];
+var gentils_pluriel = ["Jquery", "NodeJS", "PHP", "CSS3", "HTML5", "AJAX", "Javascript", "SSH2"];
 var gentils_singulier = ["MAMP", "Flash Player", "Silverlight", "Sublime Text", "Atom", "CMD", "Filezilla", "Brackets", "Dreamweaver", "Notepad++", "Chromium", "Java"];
 var gentils_groupes = ["SSH", "WAMP", "Firefox", "Scilab"];
 var site_com = ["Github", "OpenClassRooms", "Stackoverflow", "Comment ça marche", "Clubic", "01net", "Twitter", "Tomsguide"];
-var messagerie = ["Gmail", "Caramail", "IRC", "Hotmail", "Jabber", "Telegram", "MSN Messenger", "Skype", "Mumble", "Teamspeak", "ICQ", "Google Talk"];
+var messagerie = ["Twitter", "Gmail", "Caramail", "IRC", "Hotmail", "Jabber", "Telegram", "MSN Messenger", "Skype", "Mumble", "Teamspeak", "ICQ", "Google Talk"];
 
 // Nous = installer / apt-get install / include
 // eux = logiciel
 // autre = logiciel
 // groupe = autre logiciel
 // gentils = site communautaire
+
+
 function intro1() {
+   
+    
     var user = element_from_array('utilisateurs');
     var eux = element_from_array('gentils_singulier');
     var autres = element_from_array('gentils_singulier');
@@ -44,7 +49,7 @@ function intro3() {
 function intro4() {
     var user = element_from_array('utilisateurs');
     var groupe = element_from_array('gentils_pluriel');
-    var groupe2 = element_from_array('gentils_pluriel');
+    var groupe2 = element_from_array('gentils_groupes');
     var gentils = element_from_array('site_com');
     return ("Je suis sûr qu'il faut " + user + " " + groupe + ". Selon " + gentils + ", ça vient d'une faille sur " + groupe2);
 }
@@ -53,12 +58,21 @@ function intro5() {
     var user = element_from_array('utilisateurs');
     var groupe = element_from_array('gentils_groupes');
     var gentils = element_from_array('site_com');
-    var groupe = element_from_array('gentils_pluriel');
+    var groupe2 = element_from_array('gentils_pluriel');
     var eux = element_from_array('gentils_singulier');
-    return ("J'ai vu l'autre jour qu'il fallait " + user + " " + groupe + " en utilisant " + eux + ". De toute façon, " + groupe + " est clairement inutilisable en 2015");
+    return ("J'ai vu l'autre jour qu'il fallait " + user + " " + groupe + " en utilisant " + eux + ". De toute façon, " + groupe2 + " est clairement inutilisable en 2015");
+}
+function intro6() {
+    var user = element_from_array('utilisateurs');
+    var user2 = element_from_array('utilisateurs2');
+    var groupe = element_from_array('gentils_groupes');
+    var gentils = element_from_array('site_com');
+    var groupe2 = element_from_array('gentils_pluriel');
+    var eux = element_from_array('gentils_singulier');
+    return ("En premier, il faut " + user + " " + groupe + " en passant par " + eux + ". Ensuite il faut simplement " + user2 + " " + groupe2);
 }
 
-var intros = [intro1(), intro2(), intro3(), intro4(), intro5()];
+var intros = [intro1(), intro2(), intro3(), intro4(), intro5(), intro6()];
 
 function randomintro() {
     var rintro = element_from_array('intros');
@@ -92,6 +106,5 @@ function randomconclu() {
     var rconclu = element_from_array('conclusions');
     return rconclu;
 }
-
 
 document.getElementById("message").innerHTML = randomintro() + "." + randomconclu();
