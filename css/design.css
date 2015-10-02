@@ -6,6 +6,8 @@ body {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
     color: #404040;
     font-family: 'Open Sans', sans-serif;
@@ -32,10 +34,14 @@ header h2 {
     -ms-flex-align: center;
     -webkit-align-items: center;
     -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
     align-items: center;
 }
 
 section {
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
     flex: 1 1 0%;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -43,8 +49,12 @@ section {
     -ms-flex-align: center;
     -webkit-align-items: center;
     -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
     align-items: center;
     justify-content: center;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
     padding: 1em 5%;
 }
